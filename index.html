@@ -181,15 +181,18 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
       async function getData() {
-        const url = "https://zinas.fly.dev/zinas";
+        const url = "https://api.izveide.lv/zinas";
         try {
           const response = await fetch(url);
+          console.log(response);
           if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
           }
 
           const json = await response.json();
-          document.getElementById("zinas").innerHTML = marked.parse(json.zinas);
+          document.getElementById("zinas").innerHTML = marked.parse(
+            json[0].zinas
+          );
         } catch (error) {
           console.error(error.message);
         }
@@ -200,6 +203,22 @@
     <style>
       li {
         margin-top: 1rem !important;
+      }
+      strong {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        display: block;
+      }
+      p strong {
+        background: black;
+        color: white;
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+      }
+      li strong {
+        margin-top: 0;
+        font-size: 1.2rem;
       }
     </style>
   </body>
