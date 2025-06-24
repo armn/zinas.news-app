@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lv">
   <head>
     <meta charset="utf-8" />
-    <title>Zinas.news - RSS lasītājs</title>
+    <title>Zinas.news — Latvijas ziņas</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="./style.css" rel="stylesheet" />
-    <script defer src="https://labojam-umami.pikapod.net/script.js" data-website-id="ae00464b-615d-4294-9792-8090a6eaec30"></script>
+    <script
+      defer
+      src="https://stats.izveide.lv/script.js"
+      data-website-id="ae00464b-615d-4294-9792-8090a6eaec30"
+    ></script>
   </head>
 
   <body class="font-inter antialiased bg-white text-zinc-900 tracking-tight">
@@ -13,66 +17,37 @@
     <div
       class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip"
     >
-      <!-- Site header -->
-      <header class="absolute top-2 md:top-6 w-full z-30">
-        <div class="px-4 sm:px-6">
-          <div class="max-w-3xl mx-auto">
-            <div
-              class="flex items-center justify-between h-14 border border-transparent [background:linear-gradient(theme(colors.white),theme(colors.white))_padding-box,linear-gradient(120deg,theme(colors.zinc.300),theme(colors.zinc.100),theme(colors.zinc.300))_border-box] rounded-lg px-3"
-            >
-              <!-- Site branding -->
-              <div class="shrink-0 mr-4">
-                <!-- Logo -->
-                <a
-                  class="flex items-center justify-center bg-white w-8 h-8 rounded shadow-sm shadow-zinc-950/20"
-                  href="index.html"
-                >
-                  <img
-                    src="./images/logo-small-transparent.svg"
-                    width="100"
-                    height="100"
-                    alt="Logo"
-                  />
-                </a>
-              </div>
-
-              <!-- Desktop navigation -->
-              <nav class="flex grow">
-                <!-- Desktop sign in links -->
-                <ul class="flex grow justify-end flex-wrap items-center">
-                  <li class="ml-1">
-                    <a
-                      class="btn-sm text-zinc-100 bg-zinc-900 hover:bg-zinc-800 w-full shadow"
-                      href="https://github.com/armn/zinas.news-app/releases/download/v1.1.0/zinas-news-1.1.0.exe"
-                      >Lejupielādēt v1.1.0 (Windows)</a
-                    >
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
-
       <!-- Page content -->
       <main class="grow">
         <!-- Hero -->
         <section
           class="relative before:absolute before:inset-0 before:h-80 before:pointer-events-none before:bg-gradient-to-b before:from-zinc-100 before:-z-10"
         >
-          <div class="pt-32 pb-12 md:pt-40">
+          <div class="pt-14 pb-4">
             <!-- Section content -->
             <div class="px-4 sm:px-6">
               <div class="max-w-3xl mx-auto">
-                <div class="text-center pb-12 md:pb-16">
+                <div class="text-center pb-6">
+                  <div
+                    class="inline-flex items-center justify-center w-20 h-20 bg-white rounded-xl shadow-md mb-8 relative before:absolute before:-top-12 before:w-52 before:h-52 before:bg-zinc-900 before:opacity-[.08] before:rounded-full before:blur-3xl before:-z-10"
+                  >
+                    <a href="index.html">
+                      <img
+                        src="./images/logo-small-transparent.svg"
+                        width="60"
+                        height="60"
+                        alt="Logo"
+                      />
+                    </a>
+                  </div>
                   <h1
                     class="font-inter-tight text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-zinc-500 via-zinc-900 to-zinc-900 pb-4"
                   >
-                    Latvijas ziņu portālu
+                    Latvijas
                     <em
                       class="italic relative inline-flex justify-center items-center text-zinc-900"
                     >
-                      RSS
+                      ziņas
                       <svg
                         class="absolute fill-zinc-300 w-[calc(100%+1rem)] -z-10"
                         xmlns="http://www.w3.org/2000/svg"
@@ -87,23 +62,7 @@
                         />
                       </svg>
                     </em>
-                    lasītājs
                   </h1>
-                  <p class="text-lg text-zinc-500 mb-8">
-                    Gūsti ieskatu par to, kas notiek Latvijā. Bez maksas un bez
-                    reklāmām.
-                  </p>
-                  <div
-                    class="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4"
-                  >
-                    <div>
-                      <a
-                        class="btn text-zinc-100 bg-zinc-900 hover:bg-zinc-800 w-full shadow"
-                        href="https://github.com/armn/zinas.news-app/releases/download/v1.1.0/zinas-news-1.1.0.exe"
-                        >Lejupielādēt v1.1.0 (Windows)</a
-                      >
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -111,241 +70,7 @@
             <div
               class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-center pb-12 md:pb-20 relative before:absolute before:-top-12 before:w-96 before:h-96 before:bg-zinc-900 before:opacity-[.15] before:rounded-full before:blur-3xl before:-z-10"
             >
-              <img
-                class="rounded-lg shadow-2xl"
-                src="./images/hero-image.png"
-                width="1104"
-                height="620"
-                alt="Hero"
-              />
-            </div>
-            <!-- Stats -->
-          </div>
-        </section>
-
-        <section>
-          <!-- FAQs -->
-          <div class="max-w-2xl mx-auto">
-            <div class="space-y-2">
-              <!-- Accordion item -->
-              <div x-data="{ expanded: false }" class="bg-zinc-100 rounded">
-                <h2>
-                  <button
-                    id="faqs-title-01"
-                    class="flex items-center justify-between w-full font-inter-tight text-left font-medium text-zinc-800 px-4 py-2.5"
-                    @click="expanded = !expanded"
-                    :aria-expanded="expanded"
-                    aria-controls="faqs-text-01"
-                  >
-                    <span>Vai šī aplikācija ir legāla?</span>
-                    <svg
-                      class="fill-zinc-400 shrink-0 ml-8"
-                      width="12"
-                      height="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center rotate-90 transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div
-                  id="faqs-text-01"
-                  role="region"
-                  aria-labelledby="faqs-title-01"
-                  class="grid text-sm text-zinc-500 overflow-hidden transition-all duration-300 ease-in-out"
-                  :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                >
-                  <div class="overflow-hidden">
-                    <p class="px-4 pb-3">
-                      Jā. Šī aplikācija nezog rakstus no portāliem, bet gan
-                      izmanto to publiski piedāvātās RSS plūsmas, tās iegūstot caur lokālu serveri.
-                    </p>
-                    <ul class="px-4 pb-3">
-                      <li>https://apollo.lv/rss</li>
-                      <li>https://tvnet.lv/rss</li>
-                      <li>https://delfi.lv/rss/?channel=delfi</li>
-                      <li>https://lsm.lv/rss/</li>
-                      <li>https://jauns.lv/rss</li>
-                      <li>https://diena.lv/rss</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <!-- Accordion item -->
-              <div x-data="{ expanded: false }" class="bg-zinc-100 rounded">
-                <h2>
-                  <button
-                    id="faqs-title-02"
-                    class="flex items-center justify-between w-full font-inter-tight text-left font-medium text-zinc-800 px-4 py-2.5"
-                    @click="expanded = !expanded"
-                    :aria-expanded="expanded"
-                    aria-controls="faqs-text-02"
-                  >
-                    <span>Kas ir RSS?</span>
-                    <svg
-                      class="fill-zinc-400 shrink-0 ml-8"
-                      width="12"
-                      height="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center rotate-90 transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div
-                  id="faqs-text-02"
-                  role="region"
-                  aria-labelledby="faqs-title-02"
-                  class="grid text-sm text-zinc-500 overflow-hidden transition-all duration-300 ease-in-out"
-                  :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                >
-                  <div class="overflow-hidden">
-                    <p class="px-4 pb-3">
-                      RSS ir nosaukuma "Really Simple Syndication" (satura
-                      vienkāršā sindicēšana) saīsinājums, un ar to apzīmē
-                      paņēmienu informācijas sniegšanai mašīnlasāmā formā. RSS
-                      ļauj lietotājiem abonēt tikai konkrētus tīmekļa vietnes
-                      tekstus vai multivides failus.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Accordion item -->
-              <div x-data="{ expanded: false }" class="bg-zinc-100 rounded">
-                <h2>
-                  <button
-                    id="faqs-title-03"
-                    class="flex items-center justify-between w-full font-inter-tight text-left font-medium text-zinc-800 px-4 py-2.5"
-                    @click="expanded = !expanded"
-                    :aria-expanded="expanded"
-                    aria-controls="faqs-text-03"
-                  >
-                    <span>Vai būs pieejama Linux/Mac OS versija?</span>
-                    <svg
-                      class="fill-zinc-400 shrink-0 ml-8"
-                      width="12"
-                      height="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center rotate-90 transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div
-                  id="faqs-text-03"
-                  role="region"
-                  aria-labelledby="faqs-title-03"
-                  class="grid text-sm text-zinc-500 overflow-hidden transition-all duration-300 ease-in-out"
-                  :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                >
-                  <div class="overflow-hidden">
-                    <p class="px-4 pb-3">
-                      Iespējams, ja sapratīšu, kā tās uzbūvēt no Windows vides
-                      ar Electron.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- Accordion item -->
-              <div x-data="{ expanded: true }" class="bg-zinc-100 rounded">
-                <h2>
-                  <button
-                    id="faqs-title-04"
-                    class="flex items-center justify-between w-full font-inter-tight text-left font-medium text-zinc-800 px-4 py-2.5"
-                    @click="expanded = !expanded"
-                    :aria-expanded="expanded"
-                    aria-controls="faqs-text-04"
-                  >
-                    <span>Kā sazināties ar aplikācijas izstrādātāju?</span>
-                    <svg
-                      class="fill-zinc-400 shrink-0 ml-8"
-                      width="12"
-                      height="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                      <rect
-                        y="5"
-                        width="12"
-                        height="2"
-                        rx="1"
-                        class="transform origin-center rotate-90 transition duration-200 ease-out"
-                        :class="{'!rotate-180': expanded}"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div
-                  id="faqs-text-04"
-                  role="region"
-                  aria-labelledby="faqs-title-04"
-                  class="grid text-sm text-zinc-500 overflow-hidden transition-all duration-300 ease-in-out"
-                  :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
-                >
-                  <div class="overflow-hidden">
-                    <p class="px-4 pb-3">
-                      Vari rakstīt man uz
-                      <a
-                        href="mailto:armands@gmail.com"
-                        class="underline font-semibold"
-                        >armands@gmail.com</a
-                      >.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <div id="zinas" class="max-w-2xl mx-auto">Ielādējas...</div>
             </div>
           </div>
         </section>
@@ -357,18 +82,6 @@
               <div
                 class="relative max-w-3xl mx-auto text-center pb-12 md:pb-16"
               >
-                <div
-                  class="inline-flex items-center justify-center w-20 h-20 bg-white rounded-xl shadow-md mb-8 relative before:absolute before:-top-12 before:w-52 before:h-52 before:bg-zinc-900 before:opacity-[.08] before:rounded-full before:blur-3xl before:-z-10"
-                >
-                  <a href="index.html">
-                    <img
-                      src="./images/logo-small-transparent.svg"
-                      width="60"
-                      height="60"
-                      alt="Logo"
-                    />
-                  </a>
-                </div>
                 <h2
                   class="font-inter-tight text-3xl md:text-4xl font-bold text-zinc-900 mb-4"
                 >
@@ -390,10 +103,10 @@
                       />
                     </svg>
                   </em>
-                  aplikācijas izstrādi
+                  šo vietni
                 </h2>
                 <p class="text-lg text-zinc-500 mb-8">
-                  Ja tev šī aplikācija liekas noderīga, vari atbalstīt tās
+                  Ja tev šī mājaslapa liekas noderīga, vari atbalstīt tās
                   izstrādi ar ziedojumu.
                 </p>
                 <div
@@ -426,7 +139,7 @@
             >
               <div class="mb-4"></div>
               <div class="grow text-sm text-zinc-500">
-                &copy; <a href="https://armn.me">Armands Leimanis</a>, 2024
+                &copy; <a href="https://armn.me">Armands Leimanis</a>, 2025
               </div>
             </div>
           </div>
@@ -434,7 +147,29 @@
       </footer>
     </div>
 
-    <script src="./js/vendors/alpinejs.min.js" defer></script>
-    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      async function getData() {
+        const url = "https://zinas.fly.dev/zinas";
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+          }
+
+          const json = await response.json();
+          document.getElementById("zinas").innerHTML = marked.parse(json.zinas);
+        } catch (error) {
+          console.error(error.message);
+        }
+      }
+      getData();
+    </script>
+
+    <style>
+      li {
+        margin-top: 1rem !important;
+      }
+    </style>
   </body>
 </html>
